@@ -24,6 +24,7 @@ zuul:
         stripPrefix: false
         sensitiveHeaders:
 
+
     recommend-service:
         path: /recommend/**
         serviceId: recommend-service
