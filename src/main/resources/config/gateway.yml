@@ -24,7 +24,6 @@ zuul:
         stripPrefix: false
         sensitiveHeaders:
 
-
     recommend-service:
         path: /recommend/**
         serviceId: recommend-service
@@ -36,6 +35,3 @@ zuul:
         serviceId: discus-service
         stripPrefix: false
         sensitiveHeaders:
-
-server:
-  port: ${PORT:80}
