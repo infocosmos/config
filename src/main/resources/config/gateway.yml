@@ -1,37 +1,9 @@
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 20000
-
-ribbon:
-  ReadTimeout: 20000
-  ConnectTimeout: 20000
+server:
+  port: ${PORT:80}
 
 zuul:
   ignoredServices: '*'
-  host:
-    connect-timeout-millis: 20000
-    socket-timeout-millis: 20000
-
   routes:
-
     news-service:
         path: /news/**
         serviceId: news-service
-        stripPrefix: false
-        sensitiveHeaders:
-
-    recommend-service:
-        path: /recommend/**
-        serviceId: recommend-service
-        stripPrefix: false
-        sensitiveHeaders:
-
-    discus-service:
-        path: /discus/**
-        serviceId: discus-service
-        stripPrefix: false
-        sensitiveHeaders:
